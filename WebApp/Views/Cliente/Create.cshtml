@@ -1,0 +1,61 @@
+﻿@using Dominio;
+@model Dominio.ClienteOcasional
+
+<h1 class="text-white mb-3 text-center">Registrar Cliente Ocasional</h1>
+<div class="d-flex justify-content-center">
+    <form method="post" style="max-width: 300px; width: 100%;">
+        <div class="mb-3">
+            <label asp-for="Documento" class="form-label text-white-50">Documento</label>
+            <input type="text" asp-for="Documento" class="form-control form-control-sm bg-dark text-white border-secondary" placeholder="Ingrese su documento" required />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Nombre" class="form-label text-white-50">Nombre</label>
+            <input type="text" asp-for="Nombre" class="form-control form-control-sm bg-dark text-white border-secondary" placeholder="Ingrese su nombre" required />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Nacionalidad" class="form-label text-white-50">Nacionalidad</label>
+            <input type="text" asp-for="Nacionalidad" class="form-control form-control-sm bg-dark text-white border-secondary" placeholder="Ingrese su nacionalidad" required />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label text-white-50">Email</label>
+            <input type="email" asp-for="Email" class="form-control form-control-sm bg-dark text-white border-secondary" placeholder="Ingrese su email" required />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Password" class="form-label text-white-50">Contraseña</label>
+            <input type="password" asp-for="Password" class="form-control form-control-sm bg-dark text-white border-secondary" placeholder="Ingrese su contraseña" required />
+        </div>
+
+        <div class="mb-4">
+            <label asp-for="ElegibleRegalo" class="form-label text-white-50">¿Elegible para regalo?</label>
+            <select asp-for="ElegibleRegalo" class="form-select form-select-sm bg-dark text-white border-secondary">
+                <option value="true">Sí</option>
+                <option value="false">No</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-sm w-100">Registrarse</button>
+
+        <p class="text-center mt-3">
+            <span class="text-white-50">¿Ya tienes una cuenta?</span>
+            <a href="/Cliente/Login" class="text-info text-decoration-none">Inicia sesión</a>
+        </p>
+
+
+    </form>
+</div>
+
+@if (!string.IsNullOrEmpty(ViewBag.Msg))
+{
+    if (ViewBag.Exito == false)
+    {
+        <p class="text-danger mt-3 text-center">@ViewBag.Msg</p>
+    }
+    else
+    {
+        <p class="text-success mt-3 text-center">@ViewBag.Msg</p>
+    }
+}

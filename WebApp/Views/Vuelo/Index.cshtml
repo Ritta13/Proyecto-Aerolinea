@@ -1,0 +1,48 @@
+﻿@using Dominio;
+@model IEnumerable<Vuelo>;
+
+<h1 class="text-white mb-3 text-center">Lista de Vuelos</h1>
+<div class="d-flex justify-content-center">
+    <div class="content-card" style="max-width: 1000px; width: 100%;">
+        @if (Model != null && Model.Any()) // Usamos Model.Any() para verificar si hay elementos
+        {
+            <div class="table-responsive">
+                <table class="table table-dark table-striped table-hover table-bordered text-center">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Número de Vuelo</th>
+                            <th>Avión</th>
+                            <th>Fecha</th>
+                            <th>Ruta Salida</th>
+                            <th>Ruta Llegada</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (Vuelo vuelo in Model)
+                        {
+                            <tr>
+                                <td>@vuelo.Id</td>
+                                <td>@vuelo.NumeroVuelo</td>
+                                <td>@vuelo.Avion.Modelo</td>
+                                <td>@vuelo.FrecuenciaDias.ToString("dd/MM/yyyy")</td>
+                                <td>@vuelo.Ruta.AeropuertoSalida.CodigoIata</td>
+                                <td>@vuelo.Ruta.AeropuertoLlegada.CodigoIata</td>
+                                <td>
+                                    <a class="btn btn-sm btn-info" asp-action="Comprar" asp-route-id="@vuelo.Id">
+                                        <i class="fas fa-shopping-cart me-1"></i> Comprar
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+        else
+        {
+            <p class="text-white-50 text-center py-4">No hay vuelos disponibles en este momento.</p>
+        }
+    </div>
+</div>

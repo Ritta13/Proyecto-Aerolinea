@@ -1,0 +1,46 @@
+﻿@using Dominio;
+@model Dominio.Vuelo;
+
+<h1 class="text-white mb-3 text-center">Comprar Pasaje</h1>
+<div class="d-flex justify-content-center">
+    <form method="post" style="max-width: 350px; width: 100%;">
+        <input type="hidden" name="vueloId" value="@Model.Id" />
+
+        <div class="mb-3 p-3 bg-secondary rounded text-white-50">
+            <h5 class="text-white mb-2"><i class="fas fa-plane-departure me-2"></i>Detalles del Vuelo</h5>
+            <p class="mb-1"><strong>Número de Vuelo:</strong> @Model.NumeroVuelo</p>
+            <p class="mb-1"><strong>Ruta:</strong> @Model.Ruta.AeropuertoSalida.CodigoIata a @Model.Ruta.AeropuertoLlegada.CodigoIata</p>
+            <p class="mb-0"><strong>Fecha:</strong> @Model.FrecuenciaDias.ToString("dd/MM/yyyy")</p>
+        </div>
+
+        <div class="mb-3">
+            <label for="fechaInput" class="form-label text-white-50">Fecha del Pasaje</label>
+            <input type="date" class="form-control form-control-sm bg-dark text-white border-secondary" id="fechaInput" name="fecha" required />
+        </div>
+
+        <div class="mb-4">
+            <label for="equipajeSelect" class="form-label text-white-50">Tipo de Equipaje</label>
+            <select class="form-select form-select-sm bg-dark text-white border-secondary" id="equipajeSelect" name="equipaje">
+                @foreach (Equipaje equip in Enum.GetValues(typeof(Equipaje)))
+                {
+                    <option value="@equip">@equip</option>
+                }
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-success btn-sm w-100"><i class="fas fa-check-circle me-1"></i> Confirmar Compra</button>
+
+    </form>
+</div>
+
+@if (!string.IsNullOrEmpty(ViewBag.Msg))
+{
+    if (ViewBag.Exito == false)
+    {
+        <p class="text-danger mt-3 text-center">@ViewBag.Msg</p>
+    }
+    else
+    {
+        <p class="text-success mt-3 text-center">@ViewBag.Msg</p>
+    }
+}

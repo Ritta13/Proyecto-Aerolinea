@@ -1,0 +1,143 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/* Estilos personalizados para el tema oscuro */
+body {
+    font-family: 'Montserrat', sans-serif; /* Ejemplo con Google Fonts */
+    background-color: #212529; /* Un gris muy oscuro casi negro para el fondo del body */
+    color: #f8f9fa; /* Color de texto predeterminado blanco para el body */
+}
+
+.navbar-custom {
+    /* Usamos bg-dark de Bootstrap o un color específico para un negro más profundo */
+    background-color: #1a1a1a !important; /* Un negro un poco más suave que el puro #000 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Sombra más pronunciada para resaltar */
+}
+
+    .navbar-custom .navbar-brand,
+    .navbar-custom .nav-link {
+        color: #ffffff !important; /* Texto blanco puro para la navbar */
+        font-weight: bold;
+    }
+
+        .navbar-custom .nav-link:hover {
+            color: #adb5bd !important; /* Gris claro al pasar el ratón para un contraste sutil */
+        }
+/* Estilo para el contenido principal, haciéndolo una "tarjeta" oscura que resalte */
+.content-card {
+    background-color: #2c3034; /* Un gris oscuro para el fondo del contenedor principal */
+    color: #f8f9fa; /* Texto blanco dentro del contenedor */
+    padding-top: 30px;
+    padding-bottom: 50px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4); /* Sombra más fuerte */
+    border-radius: 10px; /* Bordes más redondeados */
+    margin-top: 30px; /* Margen superior para separarlo de la navbar */
+    margin-bottom: 30px; /* Margen inferior */
+}
+/* Asegura que el texto dentro de las secciones de Bootstrap como .form-label, etc. sea blanco */
+.form-label, .card-title, .card-text, th, td {
+    color: #f8f9fa !important;
+}
+
+a {
+    color: #8ab4f8; /* Un azul más claro para enlaces generales en el body */
+}
+
+    a:hover {
+        color: #a7c7ed; /* Color del enlace al pasar el ratón */
+    }
+
+.footer-custom {
+    background-color: #1a1a1a; /* Fondo oscuro similar a la navbar para el pie de página */
+    color: #ffffff; /* Texto blanco */
+    padding: 20px 0;
+    border-top: 1px solid #333; /* Una línea divisoria sutil */
+}
+
+    .footer-custom a {
+        color: #ffffff; /* Enlaces blancos en el footer */
+    }
+
+        .footer-custom a:hover {
+            color: #adb5bd; /* Gris claro al pasar el ratón en el footer */
+        }
+
+
+.home-hero {
+    /* Establece la imagen de fondo. Asegúrate de que la ruta sea correcta. */
+    /* 'background-size: cover;' asegura que la imagen cubra todo el div, recortando si es necesario. */
+    background: url('/img/pexels-tanathip-rattanatum-1050216-2026324.jpg') no-repeat center center;
+    background-size: cover; /* ¡Esta propiedad asegura que la imagen complete todo el contenedor! */
+    position: relative;
+    height: 80vh; /* Altura de la sección hero, ocupa el 80% del alto de la ventana */
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    color: white; /* Color de texto predeterminado para el contenido del hero */
+    /* Superposición oscura para que el texto resalte sobre la imagen */
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde del contenedor */
+}
+
+.hero-content {
+    z-index: 10; /* Asegura que el contenido esté por encima del overlay de la imagen */
+    max-width: 800px; /* Limita el ancho del contenido para mejor legibilidad */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra al texto para mejorar la legibilidad sobre la imagen */
+}
+
+.text-white-75 { /* Color blanco semi-transparente para el párrafo */
+    color: rgba(255, 255, 255, 0.9) !important; /* Más opaco para mejor lectura */
+}
+
+.info-card {
+    background-color: #2b3035; /* Color de fondo para las tarjetas de información */
+    border: 1px solid #495057; /* Borde sutil para las tarjetas */
+    /* Transiciones suaves para los efectos al pasar el ratón */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+    .info-card:hover {
+        transform: translateY(-8px); /* Elevación de la tarjeta al pasar el ratón */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el ratón */
+    }
+
+/* Estilos para los botones */
+.btn-primary {
+    background-color: #007bff; /* Color de fondo principal para el botón */
+    border-color: #007bff; /* Color del borde principal para el botón */
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3; /* Color de fondo al pasar el ratón */
+        border-color: #004085; /* Color del borde al pasar el ratón */
+    }
+
+.btn-outline-light {
+    border-color: #f8f9fa; /* Color del borde del botón con contorno ligero */
+    color: #f8f9fa; /* Color del texto del botón con contorno ligero */
+}
+
+    .btn-outline-light:hover {
+        background-color: #f8f9fa; /* Color de fondo al pasar el ratón */
+        color: #212529; /* Color del texto al pasar el ratón */
+    }

@@ -1,0 +1,14 @@
+﻿@using Dominio;
+
+<form method="post" asp-action="Edit" >
+    <label>Ingrese el nuevo nombre </label>
+    <input type="text" name="nombre" </
+    <br>
+    <br>
+    <input type="submit" value="Editar" </ 
+
+</form>
+@if (!string.IsNullOrEmpty(ViewBag.Msg))
+{
+    <p class="text-danger mt-3 text-center">@ViewBag.Msg</p>
+}

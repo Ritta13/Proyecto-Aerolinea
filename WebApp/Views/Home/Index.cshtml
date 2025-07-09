@@ -1,0 +1,47 @@
+﻿<div class="container-fluid text-center p-0 home-hero">
+    <div class="hero-content">
+        <h1 class="display-3 text-white fw-bold mb-4 animate__animated animate__fadeInDown">
+            Descubre tu Próximo Destino
+        </h1>
+        <p class="lead text-white-75 mb-5 animate__animated animate__fadeInUp animate__delay-0-5s">
+            Explora vuelos, gestiona tus pasajes y vive la aventura de viajar.
+        </p>
+        <a asp-controller="Cliente" asp-action="Create" class="btn btn-lg btn-primary animate__animated animate__zoomIn animate__delay-1s">
+            <i class="fas fa-plane me-2"></i> Registrarse
+        </a>
+        <a asp-controller="Cliente" asp-action="Login" class="btn btn-lg btn-outline-light ms-3 animate__animated animate__zoomIn animate__delay-1-2s">
+            <i class="fas fa-sign-in-alt me-2"></i> Iniciar Sesión
+        </a>
+    </div>
+</div>
+
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-4 mb-4 animate__animated animate__fadeInLeft animate__delay-1-5s">
+            <div class="info-card p-4 rounded shadow">
+                <i class="fas fa-ticket-alt fa-3x mb-3 text-primary"></i>
+                <h5 class="text-white">Reserva Fácil</h5>
+                <p class="text-white-50">Encuentra y compra tus pasajes en pocos pasos. ¡Sin complicaciones!</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4 animate__animated animate__fadeInUp animate__delay-1-7s">
+            <div class="info-card p-4 rounded shadow">
+                <i class="fas fa-user-shield fa-3x mb-3 text-success"></i>
+                <h5 class="text-white">Tu Perfil Seguro</h5>
+                <p class="text-white-50">Accede a tu información y beneficios de manera protegida.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4 animate__animated animate__fadeInRight animate__delay-2s">
+            <div class="info-card p-4 rounded shadow">
+                <i class="fas fa-headset fa-3x mb-3 text-info"></i>
+                <h5 class="text-white">Soporte 24/7</h5>
+                <p class="text-white-50">Estamos aquí para ayudarte en cada etapa de tu viaje.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Enlaces a las hojas de estilo externas (Font Awesome y Animate.css) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />

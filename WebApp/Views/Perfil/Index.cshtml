@@ -1,0 +1,28 @@
+﻿<div class="d-flex justify-content-center mt-5 mb-5"> <div class="content-card text-center p-4" style="max-width: 500px; width: 100%;"> <i class="fas fa-user-circle fa-5x mb-3 text-primary"></i> <h2 class="text-white mb-4">Perfil del Cliente</h2>
+
+        <div class="text-start"> <p class="lead mb-2"><i class="fas fa-user me-2 text-info"></i><strong class="text-white">Nombre:</strong> @ViewBag.Nombre</p>
+            <p class="lead mb-2"><i class="fas fa-id-card me-2 text-info"></i><strong class="text-white">Documento:</strong> @ViewBag.Documento</p>
+            <p class="lead mb-2"><i class="fas fa-briefcase me-2 text-info"></i><strong class="text-white">Rol:</strong> @ViewBag.Rol</p>
+            <p class="lead mb-3"><i class="fas fa-user-tag me-2 text-info"></i><strong class="text-white">Tipo de Usuario:</strong> @ViewBag.TipoUsuario</p>
+
+            @if (ViewBag.EsPremium != null && ViewBag.EsPremium == true)
+            {
+                <hr class="border-secondary my-3" /> <p class="lead mb-2 text-warning"><i class="fas fa-star me-2"></i><strong class="text-white">Puntos acumulados:</strong> @ViewBag.Puntos</p>
+                <span class="badge bg-warning text-dark mt-2">¡Cliente Premium!</span> }
+            else if (ViewBag.EsOcasional != null && ViewBag.EsOcasional == true)
+            {
+                <hr class="border-secondary my-3" />
+                @if (ViewBag.ElegibleRegalo == true)
+                {
+                    <p class="lead mb-2 text-success"><i class="fas fa-gift me-2"></i><strong class="text-white">Elegibilidad para Regalo:</strong> Cliente Elegible</p>
+                    <span class="badge bg-success mt-2">¡Felicitaciones!</span>
+                }
+                else
+                {
+                    <p class="lead mb-2 text-danger"><i class="fas fa-times-circle me-2"></i><strong class="text-white">Elegibilidad para Regalo:</strong> Cliente no Elegible</p>
+                    <span class="badge bg-danger mt-2">Pendiente de Requisitos</span>
+                }
+            }
+        </div>
+    </div>
+</div>

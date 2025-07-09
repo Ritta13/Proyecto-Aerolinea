@@ -1,0 +1,25 @@
+﻿<h1 class="text-white mb-3 text-center">Iniciar sesión</h1>
+<div class="d-flex justify-content-center">
+    <form method="post" style="max-width: 350px; width: 100%;">
+        <div class="mb-3">
+            <label for="emailInput" class="form-label text-white-50">Email</label> <input type="email" class="form-control form-control-sm bg-dark text-white border-secondary" id="emailInput" name="email" placeholder="Ingrese su email" required />
+        </div>
+
+        <div class="mb-4">
+            <label for="passwordInput" class="form-label text-white-50">Contraseña</label> <input type="password" class="form-control form-control-sm bg-dark text-white border-secondary" id="passwordInput" name="pass" placeholder="Ingrese su contraseña" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-sm w-100">Iniciar sesión</button>
+
+        <p class="text-center mt-3">
+            <span class="text-white-50">¿No tenés cuenta?</span>
+            <a href="/Cliente/Create" class="text-info text-decoration-none">Registrate aquí</a>
+        </p>
+
+    </form>
+</div>
+
+@if (!string.IsNullOrEmpty(ViewBag.Msg))
+{
+    <p class="text-danger mt-3 text-center">@ViewBag.Msg</p>
+}
