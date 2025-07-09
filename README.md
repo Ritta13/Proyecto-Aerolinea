@@ -33,6 +33,18 @@ Este proyecto permite a una aerolínea gestionar reservas de vuelos y ventas de 
 
 ---
 
+## 🔐 Cuentas para acceso en entorno Azure
+
+- **Cliente Premium**  
+  Email: `juanp@gmail.com`  
+  Contraseña: `juan0123`
+
+- **Administrador**  
+  Email: `admin1@empresa.com`  
+  Contraseña: `admin123`
+
+---
+
 ## 🚀 Tecnologías y herramientas
 - ASP.NET 8.0 / MVC
 - C#
@@ -46,3 +58,8 @@ Este proyecto permite a una aerolínea gestionar reservas de vuelos y ventas de 
 
 ---
 
+📝 **Autor**  
+👨‍💻 Andrés Ritta  
+Estudiante Analista Programador – ORT 📍  
+🔗 GitHub: [Ritta13](https://github.com/Ritta13)  
+🔗 LinkedIn: [andres-ritta-09b41b231](https://www.linkedin.com/in/andres-ritta-09b41b231)
